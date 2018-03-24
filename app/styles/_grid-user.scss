@@ -17,10 +17,14 @@
 		display: flex;		
 		justify-content: center;
 		align-items: center;
-        &>img {
+        & img {
 			border-radius: 50%;
 			box-shadow: 0 0 13px 0 #484141;
-        }
+			transition: all 1s;
+		}
+		& img:hover {
+			transform: scale(1.5);
+		}
 	}
 	&__description{
 		width: 75%;
