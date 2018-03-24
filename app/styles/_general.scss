@@ -1,7 +1,8 @@
 * {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -11,15 +12,34 @@ html {
     width: 100%;
 }
 
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
 .main {
     background-color: #f5f5f5;
     box-shadow: 0 0 51px 2px #1565C0;
-    height: 100vh;
+	height: 100vh;
+	overflow: auto;
     margin: 0 auto;
     width: 50%;
 }
 
-img {
-    width: 100%;
-    max-width: 100%;
+.header {
+	&__title{
+		padding-top: 7%;
+		&--center {
+			text-align: center
+		}
+	}
+}
+
+
+
+
+@media (max-width: 520px) {
+	.main {
+		width: 98%;
+	}
 }

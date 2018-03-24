@@ -6,14 +6,18 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ChurchDesk Front-End Challenge</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="./dist/styles/styles.css">
 </head>
 
 <body>
 	<main class="main">
+		<header class="header">
+			<h1 class="header__title header__title--center">GithubSearch</h1>
+		</header>
 		<section class="search__user">
 			<form class="search__user__form">
-				<label for="search-field">Search user</label>
+				<label for="search-field" class="search__user__label">Search user</label>
 				<input id="search-field" class="search__user__field" type="search" autofocus required>
 				<button class="search__user__button" type="submit">Search</button>
 			</form>
@@ -66,7 +70,7 @@
 					<p>Followers: 15</p>
 					<p>Following: 49</p>
 				</div>
-			</div>
+			</div>						
 		</section>
 	</main>
 </body>
