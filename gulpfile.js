@@ -26,16 +26,16 @@ gulp.task('browserSync', () => {
 });
 
 gulp.task('images', (tmp) => {
-	return gulp.src(['app/images/*.jpg', 'app/images/*.png'])
+	return gulp.src(['app/images/**/*'])
 		.pipe(plumber())
 		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-		.pipe(gulp.dest('app/images'));
+		.pipe(gulp.dest('app/dist/images/'));
 });
 
 gulp.task('images-deploy', () => {
 	return gulp.src(['app/images/**/*', '!app/images/README'])
 		.pipe(plumber())
-		.pipe(gulp.dest('app/dist/images'));
+		.pipe(gulp.dest('app/dist/images/'));
 });
 
 gulp.task('scripts', () => {
