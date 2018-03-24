@@ -2,16 +2,15 @@
     width: 100%;
     padding: 5%;
     &__user {
-        background-color: #90caf9;
-        height: 8vh;
-        margin-bottom: .5vh;
+        background-color: #90caf9;        
+        margin-bottom: .7vh;
     }
 }
 
-.user__detail {
-	height: 14vh;
+.user__detail {	
 	display: flex;
-	justify-content: center;
+	justify-content: center;	
+	align-items: center;
     &__image {
 		width: 15%;
 		height: 100%;
@@ -20,11 +19,13 @@
 		align-items: center;
         &>img {
 			border-radius: 50%;
-			
+			box-shadow: 0 0 13px 0 #484141;
         }
 	}
 	&__description{
 		width: 75%;
+		padding-top: 1%;
+		padding-bottom: 1%;
 		padding-left: 8%;
 	}
 }

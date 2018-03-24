@@ -1,5 +1,9 @@
 .search__user {
-    padding: 5%;
+	padding: 5%;
+	&__label { 
+		display: inline-block;
+		width: 100%;
+	}
     &__field {
         height: 4vh;
         width: 80%;
