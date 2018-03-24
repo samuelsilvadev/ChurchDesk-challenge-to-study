@@ -1,0 +1,13 @@
+.search__user {
+    padding: 5%;
+    &__field {
+        height: 4vh;
+        width: 80%;
+    }
+    &__button {
+		border: 0;
+		cursor: pointer;
+		height: 4vh;
+		width: 18%;		
+	}
+}
