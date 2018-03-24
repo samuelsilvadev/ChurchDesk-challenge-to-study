@@ -18,61 +18,18 @@
 		<section class="search__user">
 			<form class="search__user__form">
 				<label for="search-field" class="search__user__label">Search user</label>
-				<input id="search-field" class="search__user__field" type="search" autofocus required>
-				<button class="search__user__button" type="submit">Search</button>
+				<input id="search-field" class="search__user__field js-search-field" type="search" autofocus required>
+				<button class="search__user__button js-search-button" type="submit">Search</button>
 			</form>
 		</section>
-		<section class="grid__users">
-			<div class="grid__users__user user__detail">
-				<div class="user__detail__image">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQzkGr6zOpQD7nG8YtZIIzlutO7kOL1NkG88BOH5fNVBqkwWc" alt="Profile photo">
-				</div>
-				<div class="user__detail__description">
-					<h4>Samuel Silva</h4>
-					<p>repositories: 53</p>
-					<p>Stars: 67</p>
-					<p>Followers: 15</p>
-					<p>Following: 49</p>
-				</div>
-			</div>
-			<div class="grid__users__user user__detail">
-				<div class="user__detail__image">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQzkGr6zOpQD7nG8YtZIIzlutO7kOL1NkG88BOH5fNVBqkwWc" alt="Profile photo">
-				</div>
-				<div class="user__detail__description">
-					<h4>Samuel Silva</h4>
-					<p>repositories: 53</p>
-					<p>Stars: 67</p>
-					<p>Followers: 15</p>
-					<p>Following: 49</p>
-				</div>
-			</div>
-			<div class="grid__users__user user__detail">
-				<div class="user__detail__image">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQzkGr6zOpQD7nG8YtZIIzlutO7kOL1NkG88BOH5fNVBqkwWc" alt="Profile photo">
-				</div>
-				<div class="user__detail__description">
-					<h4>Samuel Silva</h4>
-					<p>repositories: 53</p>
-					<p>Stars: 67</p>
-					<p>Followers: 15</p>
-					<p>Following: 49</p>
-				</div>
-			</div>
-			<div class="grid__users__user user__detail">
-				<div class="user__detail__image">
-					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQzkGr6zOpQD7nG8YtZIIzlutO7kOL1NkG88BOH5fNVBqkwWc" alt="Profile photo">
-				</div>
-				<div class="user__detail__description">
-					<h4>Samuel Silva</h4>
-					<p>repositories: 53</p>
-					<p>Stars: 67</p>
-					<p>Followers: 15</p>
-					<p>Following: 49</p>
-				</div>
-			</div>						
-		</section>
+		<section class="grid__users js-grid-users"></section>
+		<div class="loading loading--hide js-loading" style="">
+			<a class="loading__link" href="https://github.com/" target="_blank">
+				<img class="loading__image" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt="Github Image">
+			</a>
+		</div>
 	</main>
+	<script src="./dist/scripts/app.js"></script>
 </body>
 
 </html>
