@@ -4,7 +4,9 @@ This project is a copy of [ChurchDesk-frontend-challenge](https://github.com/Chu
 
 ## How to install
 
-...
+- [sudo] npm install -g gulp
+- npm install
+- npm start 
 
 ## Contacts
 
