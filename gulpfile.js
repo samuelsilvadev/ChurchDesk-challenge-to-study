@@ -17,10 +17,7 @@ gulp.task('browserSync', () => {
 	browserSync({
 		server: {
 			baseDir: "./app/"
-		},
-		options: {
-			reloadDelay: 250
-		},
+		},		
 		notify: false
 	});
 });
@@ -40,8 +37,7 @@ gulp.task('images-deploy', () => {
 
 gulp.task('scripts', () => {
 	return gulp.src(['app/scripts/**/*.js'])
-		.pipe(plumber())
-		.pipe(concat('app.js'))
+		.pipe(plumber())		
 		.on('error', console.error)
 		.pipe(gulp.dest('app/dist/scripts'))
 		.pipe(browserSync.reload({ stream: true }));
@@ -141,7 +137,7 @@ gulp.task('scaffold', () => {
 
 gulp.task('default', ['browserSync', 'scripts', 'styles'], () => {
 	//a list of watchers, so it will watch all of the following files waiting for changes
-	gulp.watch('app/scripts/src/**', ['scripts']);
+	gulp.watch('app/scripts/**', ['scripts']);
 	gulp.watch('app/styles/**', ['styles']);
 	gulp.watch('app/images/**', ['images']);
 	gulp.watch('app/*.html', ['html']);
