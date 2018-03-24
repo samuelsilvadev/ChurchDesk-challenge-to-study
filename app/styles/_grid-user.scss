@@ -1,0 +1,30 @@
+.grid__users {
+    width: 100%;
+    padding: 5%;
+    &__user {
+        background-color: #90caf9;
+        height: 8vh;
+        margin-bottom: .5vh;
+    }
+}
+
+.user__detail {
+	height: 14vh;
+	display: flex;
+	justify-content: center;
+    &__image {
+		width: 15%;
+		height: 100%;
+		display: flex;		
+		justify-content: center;
+		align-items: center;
+        &>img {
+			border-radius: 50%;
+			
+        }
+	}
+	&__description{
+		width: 75%;
+		padding-left: 8%;
+	}
+}
