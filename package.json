@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "private": false,
   "scripts": {
-    "start": ""
+    "start": "gulp"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.7",
+    "browserify": "^16.1.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.3",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.1.1",
@@ -18,10 +22,12 @@
     "gulp-sequence": "^0.4.6",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.0.1"
+    "gulp-uglify": "^2.0.1",
+    "run-sequence": "^2.2.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "description": "This project is a copy of [ChurchDesk-frontend-challenge](https://github.com/ChurchDesk/cd-challenge), I'm just doing this to study and better my skills.",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {},
   "repository": {
     "type": "git",
