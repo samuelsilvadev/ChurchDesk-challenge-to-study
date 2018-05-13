@@ -62,12 +62,12 @@ gulp.task('scripts-deploy-babel', () => {
 			presets: ['env']
 		}))
 		.pipe(gulp.dest(file => file.base));
-	}
+}
 );
 
 gulp.task('scripts-deploy-end', () => {
 	return gulp.src(['app/dist/scripts/app.js'])
-		.pipe(plumber())		
+		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(gulp.dest(file => file.base));
 });
@@ -99,7 +99,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('styles-deploy', () => {
-	return gulp.src('app/styles/init.scss')
+	return gulp.src('app/styles/main.scss')
 		.pipe(plumber())
 		.pipe(sass({
 			includePaths: [
@@ -139,11 +139,7 @@ gulp.task('html-deploy', () => {
 		.pipe(gulp.dest('app/dist/styles'));
 });
 
-gulp.task('clean', () => {
-	return shell.task([
-		'rm -rf ./app/dist'
-	]);
-});
+gulp.task('clean', shell.task('rm -rf ./app/dist/'));
 
 gulp.task('scaffold', () => {
 	return shell.task([
@@ -155,7 +151,7 @@ gulp.task('scaffold', () => {
 	]);
 });
 
-gulp.task('default', ['browserSync', 'scripts', 'styles'], () => {	
+gulp.task('default', ['browserSync', 'scripts', 'styles'], () => {
 	gulp.watch('app/scripts/**', ['scripts']);
 	gulp.watch('app/styles/**', ['styles']);
 	gulp.watch('app/images/**', ['images']);
@@ -163,5 +159,14 @@ gulp.task('default', ['browserSync', 'scripts', 'styles'], () => {
 });
 
 gulp.task('deploy', () => {
-	runSequence('clean', 'scaffold', 'scripts-deploy', 'scripts-deploy-babel', 'scripts-deploy-end', 'styles-deploy', 'images-deploy', 'html-deploy')
+	runSequence(
+		'clean',
+		'scaffold',
+		'scripts-deploy',
+		'scripts-deploy-babel',
+		'scripts-deploy-end',
+		'styles-deploy',
+		'images-deploy',
+		'html-deploy'
+	);
 });
